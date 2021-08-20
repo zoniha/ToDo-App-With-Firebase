@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				417070AA26CF6DD700460BAC /* ToDoAppWithFirebaseApp.swift */,
+				417070BE26CF6FCD00460BAC /* Models */,
 				417070BA26CF6E3200460BAC /* Views */,
 				417070AE26CF6DDB00460BAC /* Assets.xcassets */,
 				417070B326CF6DDB00460BAC /* Info.plist */,
 				417070B026CF6DDB00460BAC /* Preview Content */,
-				417070BE26CF6FCD00460BAC /* Models */,
 			);
 			path = ToDoAppWithFirebase;
 			sourceTree = "<group>";
@@ -95,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 417070B626CF6DDB00460BAC /* Build configuration list for PBXNativeTarget "ToDoAppWithFirebase" */;
 			buildPhases = (
+				415F61B926D0029900D95FD6 /* Run SwiftLint */,
 				417070A326CF6DD700460BAC /* Sources */,
 				417070A426CF6DD700460BAC /* Frameworks */,
 				417070A526CF6DD700460BAC /* Resources */,
@@ -151,6 +152,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		415F61B926D0029900D95FD6 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		417070A326CF6DD700460BAC /* Sources */ = {
