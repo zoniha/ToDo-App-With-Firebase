@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		417070AB26CF6DD700460BAC /* ToDoAppWithFirebaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417070AA26CF6DD700460BAC /* ToDoAppWithFirebaseApp.swift */; };
-		417070AD26CF6DD700460BAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417070AC26CF6DD700460BAC /* ContentView.swift */; };
+		417070AD26CF6DD700460BAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417070AC26CF6DD700460BAC /* HomeView.swift */; };
 		417070AF26CF6DDB00460BAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417070AE26CF6DDB00460BAC /* Assets.xcassets */; };
 		417070B226CF6DDB00460BAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417070B126CF6DDB00460BAC /* Preview Assets.xcassets */; };
+		417070BC26CF6FC800460BAC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417070BB26CF6FC800460BAC /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		417070A726CF6DD700460BAC /* ToDoAppWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417070AA26CF6DD700460BAC /* ToDoAppWithFirebaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppWithFirebaseApp.swift; sourceTree = "<group>"; };
-		417070AC26CF6DD700460BAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		417070AC26CF6DD700460BAC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		417070AE26CF6DDB00460BAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417070B126CF6DDB00460BAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		417070B326CF6DDB00460BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		417070BB26CF6FC800460BAC /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				417070AA26CF6DD700460BAC /* ToDoAppWithFirebaseApp.swift */,
-				417070AC26CF6DD700460BAC /* ContentView.swift */,
+				417070BA26CF6E3200460BAC /* Views */,
 				417070AE26CF6DDB00460BAC /* Assets.xcassets */,
 				417070B326CF6DDB00460BAC /* Info.plist */,
 				417070B026CF6DDB00460BAC /* Preview Content */,
+				417070BE26CF6FCD00460BAC /* Models */,
 			);
 			path = ToDoAppWithFirebase;
 			sourceTree = "<group>";
@@ -67,6 +70,22 @@
 				417070B126CF6DDB00460BAC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		417070BA26CF6E3200460BAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				417070AC26CF6DD700460BAC /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		417070BE26CF6FCD00460BAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				417070BB26CF6FC800460BAC /* Task.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417070AD26CF6DD700460BAC /* ContentView.swift in Sources */,
+				417070AD26CF6DD700460BAC /* HomeView.swift in Sources */,
+				417070BC26CF6FC800460BAC /* Task.swift in Sources */,
 				417070AB26CF6DD700460BAC /* ToDoAppWithFirebaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
