@@ -1,8 +1,19 @@
 import SwiftUI
 
 struct AddItemView: View {
+	@State var title = ""
+	@State var description = ""
+
     var body: some View {
-        Text("")
+		NavigationView {
+			Form {
+				TextField("TODO title", text: $title)
+				TextField("TODO description", text: $description)
+
+				Button("Create", action: {})
+			}
+			.navigationTitle("Create new TODO")
+		}
     }
 }
 
