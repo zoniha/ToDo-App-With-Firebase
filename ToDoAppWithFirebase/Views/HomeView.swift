@@ -5,15 +5,22 @@ struct HomeView: View {
 		NavigationView {
 			List {
 				ForEach(0...10, id: \.self) { number in
-					VStack(alignment: .leading) {
-						Text("Title \(number)")
-							.font(.title)
+					NavigationLink(destination: Text("\(number)")) {
+						VStack(alignment: .leading) {
+							Text("Title \(number)")
+								.font(.title)
 
-						Text("Description \(number)")
+							Text("Description \(number)")
+						}
 					}
 				}
 			}
 			.navigationTitle("My ToDo")
+			.navigationBarItems(trailing: Button(action: {
+
+			}, label: {
+				Image(systemName: "plus")
+			}))
 		}
 	}
 }
