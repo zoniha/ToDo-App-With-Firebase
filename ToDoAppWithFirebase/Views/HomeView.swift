@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct HomeView: View {
+	@State var showSheet = false
+
 	var body: some View {
 		NavigationView {
 			List {
@@ -17,11 +19,14 @@ struct HomeView: View {
 			}
 			.navigationTitle("My ToDo")
 			.navigationBarItems(trailing: Button(action: {
-
+				showSheet.toggle()
 			}, label: {
 				Image(systemName: "plus")
 			}))
 		}
+		.sheet(isPresented: $showSheet, content: {
+			AddItemView()
+		})
 	}
 }
 
