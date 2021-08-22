@@ -5,8 +5,11 @@ struct DetailView: View {
 	@State var description: String
 
 	var body: some View {
-		Text(description)
-			.navigationTitle(title)
+		NavigationView {
+			Text(description)
+				.padding()
+				.navigationTitle(title)
+		}
 	}
 }
 
