@@ -25,7 +25,7 @@ struct HomeView: View {
 				Image(systemName: "plus")
 			}))
 		}
-		.sheet(isPresented: $showSheet, content: {
+		.sheet(isPresented: $showSheet, onDismiss: model.loadItems, content: {
 			AddItemView()
 		})
 		.onAppear {
