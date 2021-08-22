@@ -31,4 +31,21 @@ struct FirebaseService {
 		}
 		.eraseToAnyPublisher()
 	}
+
+	static func create(_ todo: TODOItem) -> AnyPublisher<Void, Error> {
+		Future<Void, Error> { promise in
+			self.db.collection("todos")
+				.addDocument(data: [
+					"title": todo.title,
+					"description": todo.description
+				]) { error in
+					if let error = error {
+						promise(.failure(error))
+					} else {
+						promise(.success(()))
+					}
+				}
+		}
+		.eraseToAnyPublisher()
+	}
 }
