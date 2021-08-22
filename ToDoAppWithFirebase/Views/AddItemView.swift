@@ -1,24 +1,23 @@
 import SwiftUI
 
 struct AddItemView: View {
-	@State var title = ""
-	@State var description = ""
+	@StateObject var model = AddItemViewModel()
 
-    var body: some View {
+	var body: some View {
 		NavigationView {
 			Form {
-				TextField("TODO title", text: $title)
-				TextField("TODO description", text: $description)
+				TextField("TODO title", text: $model.title)
+				TextField("TODO description", text: $model.description)
 
-				Button("Create", action: {})
+				Button("Create", action: model.create)
 			}
 			.navigationTitle("Create new TODO")
 		}
-    }
+	}
 }
 
 struct AddItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddItemView()
-    }
+	static var previews: some View {
+		AddItemView()
+	}
 }
