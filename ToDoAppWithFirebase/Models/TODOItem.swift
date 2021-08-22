@@ -1,6 +1,7 @@
 import Foundation
 
-struct TODOItem: Decodable {
+struct TODOItem: Decodable, Identifiable {
+	let id = UUID().uuidString
 	var title: String
 	var description: String
 
@@ -10,8 +11,8 @@ struct TODOItem: Decodable {
 			self.title = try values.decode(String.self, forKey: .title)
 			self.description = try values.decode(String.self, forKey: .description)
 		} catch {
-			self.title = "Title error"
-			self.description = "Desc error"
+			self.title = "Title Error"
+			self.description = "Desc Error"
 		}
 	}
 }
