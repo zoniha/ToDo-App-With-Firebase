@@ -1,23 +1,24 @@
 import SwiftUI
 
 struct HomeView: View {
+	@StateObject var model = ContentViewModel()
 	@State var showSheet = false
 
 	var body: some View {
 		NavigationView {
 			List {
-				ForEach(0...10, id: \.self) { number in
-					NavigationLink(destination: Text("\(number)")) {
+				ForEach(model.items, id: \.id) { item in
+					NavigationLink(destination: DetailView(title: item.title, description: item.description)) {
 						VStack(alignment: .leading) {
-							Text("Title \(number)")
+							Text(item.title)
 								.font(.title)
 
-							Text("Description \(number)")
+							Text(item.description)
 						}
 					}
 				}
 			}
-			.navigationTitle("My ToDo")
+			.navigationBarTitle("My ToDo", displayMode: .inline)
 			.navigationBarItems(trailing: Button(action: {
 				showSheet.toggle()
 			}, label: {
@@ -27,6 +28,9 @@ struct HomeView: View {
 		.sheet(isPresented: $showSheet, content: {
 			AddItemView()
 		})
+		.onAppear {
+			model.loadItems()
+		}
 	}
 }
 
