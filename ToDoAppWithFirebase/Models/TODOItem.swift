@@ -15,6 +15,11 @@ struct TODOItem: Decodable, Identifiable {
 			self.description = "Desc Error"
 		}
 	}
+
+	init(title: String, description: String) {
+		self.title = title
+		self.description = description
+	}
 }
 
 enum TODOItemKeys: String, CodingKey {
